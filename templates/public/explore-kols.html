@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore KOLs - KOLConnect</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include "components/navbar.html" %}
+<div class="container">
+
+
+<h2 style="padding:30px">Explore KOLs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Sarah Chen</h3>
+<p>Fashion • Instagram</p>
+
+<div class="stats">
+<span>250K</span>
+<span>4.2%</span>
+<span>⭐ 4.8</span>
+</div>
+
+<button class="btn-primary">Contact</button>
+</div>
+
+<div class="card">
+<h3>Alex Rivera</h3>
+<p>Tech • YouTube</p>
+
+<div class="stats">
+<span>1.2M</span>
+<span>3.8%</span>
+<span>⭐ 4.9</span>
+</div>
+
+<button class="btn-primary">Contact</button>
+
+</div>
+
+</body>
+</html>

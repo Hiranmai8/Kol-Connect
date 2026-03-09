@@ -1,0 +1,39 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="settings-card">
+
+<h2>KOL Account Settings</h2>
+
+<form id="settingsForm">
+
+<input type="email" placeholder="Change Email">
+
+<input type="password" placeholder="New Password">
+
+<input type="password" placeholder="Confirm Password">
+
+<button type="submit" class="settings-btn">Update Settings</button>
+
+</form>
+
+<div class="success-msg" id="successMsg">
+Settings Updated Successfully
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("settingsForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+document.getElementById("successMsg").style.display="block"
+
+})
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pricing - KOLConnect</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include "components/navbar.html" %}
+
+<h1 style="text-align:center;margin-top:60px">
+Simple Transparent Pricing
+</h1>
+<h3 style="text-align:center;margin-top:0px">
+    Choose the plan that works for you
+</h3>
+
+<div class="pricing">
+
+<div class="price-card">
+
+<h2>Starter</h2>
+<div class="price">Free</div>
+
+<ul>
+<li>3 Collaborations</li>
+<li>Basic Analytics</li>
+<li>Email Support</li>
+</ul>
+
+<button class="btn-primary">Get Started</button>
+
+</div>
+
+<div class="price-card">
+
+<h2>Pro</h2>
+<div class="price">$49/mo</div>
+
+<ul>
+<li>Unlimited campaigns</li>
+<li>Advanced analytics</li>
+<li>Escrow payments</li>
+</ul>
+
+<button class="btn-primary">Get Started</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

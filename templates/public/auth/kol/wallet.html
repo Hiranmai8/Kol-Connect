@@ -1,0 +1,54 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="wallet-page">
+
+<h2>Wallet</h2>
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<h3>Available Balance</h3>
+<p>$1200</p>
+</div>
+
+<div class="dash-card">
+<h3>Pending</h3>
+<p>$300</p>
+</div>
+
+<div class="dash-card">
+<h3>Total Earned</h3>
+<p>$4500</p>
+</div>
+
+</div>
+
+<h3>Transaction History</h3>
+
+<table class="wallet-table">
+
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>10 Mar</td>
+<td>Nike Campaign</td>
+<td>$500</td>
+</tr>
+
+<tr>
+<td>02 Mar</td>
+<td>Adidas Campaign</td>
+<td>$300</td>
+</tr>
+
+</table>
+
+</div>
+
+{% endblock %}

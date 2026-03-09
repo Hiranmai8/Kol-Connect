@@ -1,0 +1,52 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="wallet-page">
+
+<h2>Company Wallet</h2>
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<h3>Total Funds Added</h3>
+<p>$20,000</p>
+</div>
+
+<div class="dash-card">
+<h3>Current Balance</h3>
+<p>$8,000</p>
+</div>
+
+<div class="dash-card">
+<h3>Funds in Escrow</h3>
+<p>$5,000</p>
+</div>
+
+</div>
+
+<button class="wallet-btn">Add Funds</button>
+
+<h3>Transaction History</h3>
+
+<table class="wallet-table">
+
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>12 Mar</td>
+<td>Campaign Payment</td>
+<td>$500</td>
+<td>Completed</td>
+</tr>
+
+</table>
+
+</div>
+
+{% endblock %}

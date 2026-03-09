@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>KOL Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>KOLConnect</h2>
+
+<a class="active" href="{{ url_for('kol_dashboard') }}">Dashboard</a>
+<a href="{{ url_for('kol_profile') }}">Profile</a>
+<a href="{{ url_for('kol_social') }}">Social Accounts</a>
+<a href="{{ url_for('kol_collaborations') }}">Collaborations</a>
+<a href="{{ url_for('kol_messages') }}">Messages</a>
+<a href="{{ url_for('kol_wallet') }}">Wallet</a>
+<a href="{{ url_for('kol_settings') }}">Settings</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="dashboard-content">
+
+<h1>Dashboard</h1>
+<p class="subtitle">Welcome back! Here's your overview.</p>
+
+<!-- STATS -->
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<h3>Collaborations</h3>
+<p class="number">24</p>
+</div>
+
+<div class="dash-card">
+<h3>Pending</h3>
+<p class="number">5</p>
+</div>
+
+<div class="dash-card">
+<h3>Revenue</h3>
+<p class="number">$12,450</p>
+</div>
+
+<div class="dash-card">
+<h3>Rating</h3>
+<p class="number">4.8</p>
+</div>
+
+<div class="dash-card">
+<h3>Active</h3>
+<p class="number">3</p>
+</div>
+
+<div class="dash-card">
+<h3>Engagement</h3>
+<p class="number">5.2%</p>
+</div>
+
+</div>
+
+<!-- CHARTS -->
+
+<div class="charts-row">
+
+<div class="chart-card">
+<h3>Revenue Over Time</h3>
+<canvas id="revenueChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Engagement Growth</h3>
+<canvas id="engagementChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>

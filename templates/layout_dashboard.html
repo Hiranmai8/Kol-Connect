@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>KOL Connect Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+    <div class="logo">KOL Connect</div>
+</div>
+
+<!-- Dashboard Layout -->
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        {% if session.get("role") == "kol" %}
+
+        <h3>KOL Panel</h3>
+
+        <a href="/kol/dashboard">Dashboard</a>
+        <a href="/kol/profile">Profile</a>
+        <a href="/kol/social">Social Accounts</a>
+        <a href="/kol/collaborations">Collaborations</a>
+        <a href="/kol/messages">Messages</a>
+        <a href="/kol/wallet">Wallet</a>
+        <a href="/kol/settings">Settings</a>
+
+        {% elif session.get("role") == "company" %}
+
+        <h3>Company Panel</h3>
+
+        <a href="/company/dashboard">Dashboard</a>
+        <a href="/company/profile">Company Profile</a>
+        <a href="/company/create_campaigns">Create Campaigns</a>
+        <a href="/company/browse_kols">Browse KOLs</a>
+        <a href="/company/campaigns">Campaigns</a>
+        <a href="/company/wallets">Wallets</a>
+        <a href="/company/settings">Settings</a>
+
+        {% endif %}
+
+        <hr>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<h1>Company Settings</h1>
+
+<div class="settings-grid">
+
+<div class="settings-card">
+
+<h3>Company Information</h3>
+
+<label>Company Name</label>
+<input type="text" placeholder="Enter company name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+
+<label>Industry</label>
+<select>
+<option>Fashion</option>
+<option>Technology</option>
+<option>Gaming</option>
+<option>Food</option>
+</select>
+
+<button>Save Changes</button>
+
+</div>
+
+<div class="settings-card">
+
+<h3>Password Change</h3>
+
+<input type="password" placeholder="Current Password">
+<input type="password" placeholder="New Password">
+<input type="password" placeholder="Confirm Password">
+
+<button>Update Password</button>
+
+</div>
+
+<div class="settings-card">
+
+<h3>Notification Settings</h3>
+
+<div class="toggle">
+<span>Email Notifications</span>
+<input type="checkbox" checked>
+</div>
+
+<div class="toggle">
+<span>Campaign Alerts</span>
+<input type="checkbox" checked>
+</div>
+
+<div class="toggle">
+<span>Message Alerts</span>
+<input type="checkbox">
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

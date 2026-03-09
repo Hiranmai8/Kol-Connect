@@ -1,0 +1,101 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="profile-container">
+
+<h2 class="page-title">My Profile</h2>
+
+<!-- PROFILE CARD -->
+
+<div class="profile-card">
+
+<div class="profile-header">
+
+<div class="avatar">
+{{ name[0] if name else "K" }}
+</div>
+
+<div class="profile-info">
+<h3>{{ name }}</h3>
+<p>{{ email }}</p>
+</div>
+
+<a href="#edit" class="edit-btn">Edit Profile</a>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT CARD -->
+
+<div class="profile-card">
+
+<h3>About</h3>
+
+<p>{{ bio }}</p>
+
+<div class="about-grid">
+
+<div>
+<b>Niche</b>
+<p>{{ niche }}</p>
+</div>
+
+<div>
+<b>Location</b>
+<p>{{ location }}</p>
+</div>
+
+<div>
+<b>Languages</b>
+<p>{{ languages }}</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- EDIT PROFILE FORM -->
+
+<div class="profile-card" id="edit">
+
+<h3>Edit Profile</h3>
+
+<form method="POST" enctype="multipart/form-data">
+
+<label>Profile Picture</label>
+<input type="file" name="profile">
+
+<label>Full Name</label>
+<input type="text" name="name" value="{{ name }}">
+
+<label>Bio</label>
+<textarea name="bio">{{ bio }}</textarea>
+
+<label>Niche</label>
+<input type="text" name="niche" value="{{ niche }}">
+
+<label>Location</label>
+<input type="text" name="location" value="{{ location }}">
+
+<label>Languages</label>
+<input type="text" name="languages" value="{{ languages }}">
+
+<label>Upload Media Kit</label>
+<input type="file" name="media_kit">
+
+<label>Upload Portfolio</label>
+<input type="file" name="portfolio">
+
+<button type="submit" class="save-btn">Save Profile</button>
+
+</form>
+
+</div>
+
+</div>
+
+{% endblock %}

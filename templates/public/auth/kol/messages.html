@@ -1,0 +1,61 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="messages-layout">
+
+    <!-- LEFT CHAT LIST -->
+    <div class="chat-list">
+
+        <h3>Messages</h3>
+
+        <div class="chat-item">
+            <div class="avatar">S</div>
+            <div>
+                <b>StyleCo</b>
+                <p>We'd love to work with you!</p>
+                <small>2m</small>
+            </div>
+        </div>
+
+        <div class="chat-item">
+            <div class="avatar">G</div>
+            <div>
+                <b>GadgetHub</b>
+                <p>Final offer sent</p>
+                <small>1h</small>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT CHAT WINDOW -->
+    <div class="chat-window">
+
+        <h4>StyleCo</h4>
+        <p>Campaign: Summer Launch • Budget: $2,500</p>
+
+        <button>Send Offer</button>
+        <button>Accept</button>
+
+        <div class="chat-messages">
+
+            <p>Hi! We love your content and would like to collaborate on our summer campaign. 10:30 AM</p>
+
+            <p class="message-sent">
+            Thank you! I'd be interested. Can you share more details about the deliverables? 10:32 AM
+            </p>
+
+            <p>Sure! We need 2 Instagram posts, 3 stories, and 1 reel. Budget is $2,500. 10:35 AM</p>
+
+        </div>
+
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+
+    </div>
+
+</div>
+
+{% endblock %}

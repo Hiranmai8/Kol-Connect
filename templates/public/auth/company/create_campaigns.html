@@ -1,0 +1,38 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="campaign-page">
+
+<h2>Create Campaign</h2>
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Campaign Title" required>
+
+<textarea name="description" placeholder="Campaign Description"></textarea>
+
+<input type="text" name="deliverables" placeholder="Deliverables">
+
+<input type="number" name="budget" placeholder="Budget">
+
+<input type="date" name="deadline">
+
+<select name="platform">
+<option>Instagram</option>
+<option>YouTube</option>
+<option>TikTok</option>
+<option>X</option>
+</select>
+
+<input type="text" name="country" placeholder="Target Country">
+
+<input type="file" name="attachments">
+
+<button type="submit">Publish Campaign</button>
+
+</form>
+
+</div>
+
+{% endblock %}

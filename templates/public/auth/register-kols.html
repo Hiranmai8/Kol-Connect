@@ -1,0 +1,51 @@
+{% extends "layout_public.html" %}
+
+{% block content %}
+
+<div class="form-page">
+
+<h1>KOL Connect</h1>
+<p>Join brands and grow your influencer career.</p>
+
+<h2>Influencer Registration</h2>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<p class="error">{{ messages[0] }}</p>
+{% endif %}
+{% endwith %}
+
+<form method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="password" name="password" placeholder="Password" required>
+
+<input type="text" name="country" placeholder="Country">
+
+<input type="text" name="niche" placeholder="Niche (Tech, Fashion etc)">
+
+<select name="platform">
+<option value="">Select Platform</option>
+<option>Instagram</option>
+<option>YouTube</option>
+<option>TikTok</option>
+</select>
+
+<button type="submit">Register</button>
+
+</form>
+
+<div class="links">
+
+<a href="/login">Already have an account? Login</a>
+
+<a href="/register/company">Register as Company</a>
+
+</div>
+
+</div>
+
+{% endblock %}

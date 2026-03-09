@@ -1,0 +1,109 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<h2 class="page-title">Company Dashboard</h2>
+<p class="subtitle">Your campaign performance at a glance</p>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+<!-- STAT CARDS -->
+<div class="stats-cards">
+
+<div class="stat-card">
+<h4>Active Campaigns</h4>
+<h2>5</h2>
+<span class="positive">+2 this month</span>
+</div>
+
+<div class="stat-card">
+<h4>Total Budget Spent</h4>
+<h2>$12,000</h2>
+<span class="positive">+18%</span>
+</div>
+
+<div class="stat-card">
+<h4>Total KOLs Hired</h4>
+<h2>20</h2>
+</div>
+
+<div class="stat-card">
+<h4>Success Rate</h4>
+<h2>90%</h2>
+</div>
+
+</div>
+
+
+<!-- CHARTS SECTION -->
+<div class="chart-grid">
+
+<div class="chart-card">
+<h3>ROI Growth</h3>
+<canvas id="roiChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Campaign Budget Distribution</h3>
+<canvas id="budgetChart"></canvas>
+</div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+/* ROI LINE CHART */
+
+new Chart(document.getElementById("roiChart"),{
+
+type:"line",
+
+data:{
+labels:["Jan","Feb","Mar","Apr","May"],
+
+datasets:[{
+label:"ROI",
+data:[100,150,220,300,380],
+borderColor:"#4f6cff",
+backgroundColor:"rgba(79,108,255,0.2)",
+fill:true,
+tension:0.4
+}]
+},
+
+options:{
+responsive:true
+}
+
+})
+
+
+/* BUDGET PIE CHART */
+
+new Chart(document.getElementById("budgetChart"),{
+
+type:"pie",
+
+data:{
+labels:["Instagram","YouTube","TikTok","X"],
+
+datasets:[{
+data:[45,30,20,5],
+
+backgroundColor:[
+"#4f6cff",
+"#ff9f43",
+"#1dd1a1",
+"#576574"
+]
+
+}]
+}
+
+})
+
+</script>
+
+{% endblock %}

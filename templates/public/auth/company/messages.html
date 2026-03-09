@@ -1,0 +1,91 @@
+{% extends "layout_dashboard.html" %}
+
+{% block content %}
+
+<div class="messages-layout">
+
+<!-- LEFT CHAT LIST -->
+<div class="chat-list">
+
+<h3>Messages</h3>
+
+<div class="chat-item">
+<div class="avatar">A</div>
+<div>
+<b>Alex (KOL)</b>
+<p>Interested in your campaign</p>
+<small>2m</small>
+</div>
+</div>
+
+<div class="chat-item">
+<div class="avatar">M</div>
+<div>
+<b>Maria (KOL)</b>
+<p>Sent content draft</p>
+<small>1h</small>
+</div>
+</div>
+
+<div class="chat-item">
+<div class="avatar">D</div>
+<div>
+<b>David (KOL)</b>
+<p>Can we discuss deliverables?</p>
+<small>3h</small>
+</div>
+</div>
+
+</div>
+
+
+<!-- RIGHT CHAT WINDOW -->
+<div class="chat-window">
+
+<h4>Alex (KOL)</h4>
+<p>Campaign: Summer Launch • Budget: $2000</p>
+
+<div class="messages" id="messages">
+
+<p>Hello, interested in collaboration?</p>
+
+<p class="mymsg">
+Yes! I would like to know more about the campaign.
+</p>
+
+</div>
+
+<div class="chat-input">
+
+<input type="text" id="msg" placeholder="Type a message...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+var input=document.getElementById("msg")
+var text=input.value
+
+if(text=="") return
+
+var msg=document.createElement("p")
+msg.className="mymsg"
+msg.innerText=text
+
+document.getElementById("messages").appendChild(msg)
+
+input.value=""
+
+}
+
+</script>
+
+{% endblock %}

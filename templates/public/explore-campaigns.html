@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore Campaigns - KOLConnect</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include "components/navbar.html" %}
+
+<div class="container">
+
+<h2 style="margin-bottom:30px">Explore Campaigns</h2>
+
+<div class="grid">
+<div class="card">
+
+<h3>Summer Fashion Launch</h3>
+
+<p class="campaign-platform">Instagram</p>
+
+<div class="stats">
+<span>$5K - $15K</span>
+<span>Fashion</span>
+</div>
+
+<button class="btn-primary">Apply Now</button>
+
+</div>
+
+<div class="card">
+<h3>Tech Product Review</h3>
+<p>$2000 - $5000</p>
+<p>YouTube</p>
+
+<button class="btn-primary">Apply Now</button>
+</div>
+
+</div>
+
+</body>
+</html>
